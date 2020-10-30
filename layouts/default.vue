@@ -36,6 +36,7 @@
                   </span><br><br>
                   <span class="fill">
                     Lorem ipsum dolor sit amet.
+                    {{ article }}
                     <!-- {{ article.description }} -->
                   </span>
                   <br><br>
@@ -113,10 +114,10 @@ export default {
         articles = response.data.articles
         console.log('xxx')
         console.log(articles)
-        for (let i = 0; i <= articles.length; i++) {
-          self.articles[i] = 'articles[i]'
-        }
-
+        // for (let i = 0; i <= articles.length; i++) {
+        //   self.articles[i] = 'articles[i]'
+        // }
+        self.articles = articles
 
         // self.articles.push({})
         // this.articles[0].title = 'dog'
