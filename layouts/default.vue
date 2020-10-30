@@ -8,12 +8,9 @@
         <div style="width: 100%; padding: 0px 100px;">
           <div style="display: inline;">
             <div style="display: inline-block; background-color: white; border-radius: 100px; height: 33px; width: 33px; margin-top: -4px; margin-right: 8px;"></div> 
-            <!-- <div style="width: 40px; height: 40px; border-radius: 100px; background-color: #FFF;"></div> -->
             <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
-            <span style="opacity: 1;">{{ oogabooga }} {{ articles.length }}</span>
-            <!-- <button @click="addPage()">Add Page</button> -->
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
             <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
             <span class="fake-link" style="margin-right: 0px;" @click="getArticles('polygon')">POLYGON</span> 
@@ -31,17 +28,13 @@
                     <img :src="article.urlToImage" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
                   </div>
                   <span class="heading">
-                    <!-- Lorem ipsum dolor sit amet. -->
                     {{ article.title }}
                   </span><br><br>
                   <span class="fill">
-                    Lorem ipsum dolor sit amet.
-                    <!-- {{ article }} -->
                     {{ article.description }}
                   </span>
                   <br><br>
                   <span>
-                    <!-- Lorem ipsum dolor sit amet. -->
                     {{ convertDate(article.publishedAt) }}
                   </span>
                   <span style="float: right;">
@@ -80,28 +73,9 @@ export default {
     getArticles: function (source) {
       let self = this
 
-      // for (let i = 0; i < 5; i++) {
-      //   console.log( Math.random())
-      //   let newObject = {  }
-
-      //   // self.articles[0].name = Math.random()
-      //   self.articles[i] = null
-      //   // console.log(self.articles[index])
-      //   self.articles.splice(i,1,Math.random())
-      // }
-      //   // console.log(item)
-      //   //  = 
- 
-      //   // Object.assign(self.articles[index], { name: Math.random()})
-      //   // setTimeout(function () {
-      //   //   self.showNews = true
-      //   // }, 1000)
-      // // })
-
       this.makeVisible()
 
       self.genOpacity = 0.0
-      // this.articles.length = 0
 
       let articles = []
 
@@ -112,18 +86,9 @@ export default {
       })
       .then(response => {
         articles = response.data.articles
-        console.log('xxx')
-        console.log(articles)
-        // for (let i = 0; i <= articles.length; i++) {
-        //   self.articles[i] = 'articles[i]'
-        // }
+        
         self.articles = articles
 
-        // self.articles.push({})
-        // this.articles[0].title = 'dog'
-
-        // self.$forceUpdate();
-        // console.log(self.articles)
         this.oogabooga = 'dog'
       })
       
@@ -139,7 +104,7 @@ export default {
       setTimeout(function () {
         self.genOpacity = 1
         self.oogabooga = 'cat'
-        // self.articles[0].title = 'cat'
+        
         console.log('data is complete')
       }, 1200)
     },
