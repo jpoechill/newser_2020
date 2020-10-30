@@ -91,6 +91,9 @@ export default {
 
         this.oogabooga = 'dog'
       })
+      .catch(function () {
+        console.log('ERR')
+      })
       
       console.log('data is set')
     },
