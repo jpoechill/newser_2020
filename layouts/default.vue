@@ -12,7 +12,8 @@
             <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
-            <span style="opacity: .0;">{{ oogabooga }}</span>
+            <span style="opacity: 1;">{{ oogabooga }} {{ articles }}</span>
+            <button @click="addPage()">Add Page</button>
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
             <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
             <span class="fake-link" style="margin-right: 0px;" @click="getArticles('polygon')">POLYGON</span> 
@@ -22,7 +23,7 @@
 
       <!-- Start FullPage Content -->
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section" v-for="(article, index) in articles" :key="index" :style="{ backgroundColor: bgColors[index], height: docHeight }">
+        <div class="section fp-section fp-table" v-for="(article, index) in articles" :key="index" :style="{ backgroundColor: bgColors[index], height: docHeight }">
           <transition name="v-fade" mode="out-in">
             <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam!
@@ -66,6 +67,11 @@ export default {
     this.docHeight = window.innerHeight + 'px'
 
     this.populateColors()
+  },
+  computed: {
+    articlesComputed: function () {
+      return [1,1,1,1]
+    }
   },
   methods: {
     hasLoaded: function  () {
@@ -111,14 +117,20 @@ export default {
         //   self.articles[i] = articles[i]
         // }
 
-        articles.push('x')
+        self.articles.push({})
 
         // this.articles[0].title = 'dog'
+
+        // self.$forceUpdate();
+        console.log(self.articles)
         this.oogabooga = 'dog'
       })
-
       
       console.log('data is set')
+    },
+    addPage: function () {
+      this.$forceUpdate(); 
+      this.pages.push(1)
     },
     makeVisible() {
       let self = this
@@ -162,12 +174,13 @@ export default {
   },
   data() {
     return {
+      pages: [1,1],
       oogabooga: 'cat',
       genOpacity: 0,
       showNews: false,
       docHeight: '1000px',
       API_Key: '86fa2caa5dac471a98d05dfa2d141b6f',
-      articles: [{},{}],
+      articles: [{}],
       bgColors: [],
       sources: [
         {
