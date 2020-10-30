@@ -12,7 +12,7 @@
             <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
-            <span style="opacity: 1;">{{ oogabooga }} {{ articles }}</span>
+            <span style="opacity: 1;">{{ oogabooga }} {{ articles.length }}</span>
             <!-- <button @click="addPage()">Add Page</button> -->
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
             <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
