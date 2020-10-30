@@ -32,17 +32,17 @@
                   </div>
                   <span class="heading">
                     <!-- Lorem ipsum dolor sit amet. -->
-                    <!-- {{ article.title }} -->
+                    {{ article.title }}
                   </span><br><br>
                   <span class="fill">
                     Lorem ipsum dolor sit amet.
-                    {{ article }}
-                    <!-- {{ article.description }} -->
+                    <!-- {{ article }} -->
+                    {{ article.description }}
                   </span>
                   <br><br>
                   <span>
                     <!-- Lorem ipsum dolor sit amet. -->
-                    <!-- {{ convertDate(article.publishedAt) }} -->
+                    {{ convertDate(article.publishedAt) }}
                   </span>
                   <span style="float: right;">
                     → Visit Story
