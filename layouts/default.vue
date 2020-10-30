@@ -23,7 +23,7 @@
       <!-- Start FullPage Content -->
       <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section" v-for="x in 10" :key="x" :style="{ backgroundColor: bgColors[x], height: docHeight }">
-          yyyyy
+          ttttt
         </div>
       </full-page>
     </no-ssr>
