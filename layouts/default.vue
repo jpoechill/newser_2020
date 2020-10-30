@@ -13,7 +13,7 @@
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
             <span style="opacity: 1;">{{ oogabooga }} {{ articles }}</span>
-            <button @click="addPage()">Add Page</button>
+            <!-- <button @click="addPage()">Add Page</button> -->
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
             <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
             <span class="fake-link" style="margin-right: 0px;" @click="getArticles('polygon')">POLYGON</span> 
@@ -106,12 +106,11 @@ export default {
 
       axios.get('https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?sources=' + source + '&apiKey=36dbfb425292424e94d13d7887c9e7ba', {
         headers: {
-          "X-Requested-With": "XMLHttpRequest"
         }
       })
       .then(response => {
         articles = response.data.articles
-
+        console.log(articles)
         // for (let i = 0; i <= articles.length; i++) {
         //   // self.articles[i] = articles[i]
         // }
