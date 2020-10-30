@@ -19,33 +19,16 @@
       </div>
     </div>
     <full-page ref="fullpage" :options="options" id="fullpage">
-      <div v-for="x in 10" :key="x" class="fp-section active" data-fp-styles="null" :height="docHeight" :style="{ backgroundColor: bgColors[x], height: docHeight }">
-          <!-- <transition name="v-fade" mode="out-in"> -->
-
-            xxx
-          <!-- <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
-            
-              <div v-if="article" style="padding: 0px">
-                <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
-                  <img :src="article.urlToImage" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
-                </div>
-                <span class="heading">
-                  {{ article.title }}
-                </span><br><br>
-                <span class="fill">
-                  {{ article.description }}
-                </span>
-                <br><br>
-                <span>
-                  {{ convertDate(article.publishedAt) }}
-                </span>
-                <span style="float: right;">
-                  → Visit Story
-                </span>
-              </div>
-          </div> -->
-          <!-- </transition> -->
+      <div class="section">
+        sadasd
       </div>
+      <div class="section">
+        sadasd
+      </div>
+      <div class="section">
+        sadasd
+      </div>
+
     </full-page>
   </div>
 </template>
