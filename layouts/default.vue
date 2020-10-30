@@ -1,35 +1,18 @@
 <template>
   <div>
-    <div style="position: fixed; width: 100%; z-index: 100; margin-top: 40px;">
-      <!-- <button @click="genOpacity = 0">Opacity 0</button>
-      <button @click="genOpacity = .5">Opacity 50</button>
-      <button @click="genOpacity = 1">Opacity 100</button> -->
-      <div style="width: 100%; padding: 0px 100px;">
-        <div style="display: inline;">
-          <div style="display: inline-block; background-color: white; border-radius: 100px; height: 33px; width: 33px; margin-top: -4px; margin-right: 8px;"></div> 
-          <!-- <div style="width: 40px; height: 40px; border-radius: 100px; background-color: #FFF;"></div> -->
-          <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
+    <no-ssr>
+      <full-page ref="fullpage" :options="JSON.stringify(options)" id="fullpage">
+        <div class="section">
+          sadasd
         </div>
-        <div style="display: inline; float: right; padding-right: 200px;">
-          <span style="opacity: .0;">{{ oogabooga }}</span>
-          <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
-          <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
-          <span class="fake-link" style="margin-right: 0px;" @click="getArticles('polygon')">POLYGON</span> 
+        <div class="section">
+          sadasd
         </div>
-      </div>
-    </div>
-    <full-page ref="fullpage" :options="options" id="fullpage">
-      <div class="section">
-        sadasd
-      </div>
-      <div class="section">
-        sadasd
-      </div>
-      <div class="section">
-        sadasd
-      </div>
-
-    </full-page>
+        <div class="section">
+          sadasd
+        </div>
+      </full-page>
+    </no-ssr>
   </div>
 </template>
 
