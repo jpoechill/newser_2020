@@ -3,13 +3,13 @@
     <no-ssr>
       <full-page ref="fullpage" id="fullpage">
         <div class="section">
-          sadasd
+          aaaa
         </div>
         <div class="section">
-          sadasd
+          aaaa
         </div>
         <div class="section">
-          sadasd
+          aaaa
         </div>
       </full-page>
     </no-ssr>
