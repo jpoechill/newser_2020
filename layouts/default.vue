@@ -19,15 +19,11 @@
           </div>
         </div>
       </div>
+
+      <!-- Start FullPage Content -->
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section">
-          aaaa
-        </div>
-        <div class="section">
-          aaaa
-        </div>
-        <div class="section">
-          aaaa
+        <div class="section" v-for="x in 10" :key="x">
+          yyyyy
         </div>
       </full-page>
     </no-ssr>
