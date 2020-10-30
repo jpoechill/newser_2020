@@ -19,9 +19,11 @@
       </div>
     </div>
     <full-page ref="fullpage" :options="options" id="fullpage">
-      <div v-for="(article, index) in articles" :key="index" class="section fp-section active fp-table fp-completely" data-fp-styles="null" :height="docHeight" :style="{ backgroundColor: bgColors[index], height: docHeight }">
+      <div v-for="x in 10" :key="x" class="section fp-section active fp-table fp-completely" data-fp-styles="null" :height="docHeight" :style="{ backgroundColor: bgColors[x], height: docHeight }">
           <!-- <transition name="v-fade" mode="out-in"> -->
-          <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
+
+            xxx
+          <!-- <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
             
               <div v-if="article" style="padding: 0px">
                 <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
@@ -41,7 +43,7 @@
                   → Visit Story
                 </span>
               </div>
-          </div>
+          </div> -->
           <!-- </transition> -->
       </div>
     </full-page>
