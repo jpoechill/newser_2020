@@ -1,7 +1,7 @@
 <template>
   <div>
     <no-ssr>
-      <full-page ref="fullpage" id="fullpage">
+      <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section">
           aaaa
         </div>
