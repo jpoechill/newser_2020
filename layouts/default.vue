@@ -12,7 +12,7 @@
             <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
-            <span style="opacity: 1;">{{ oogabooga }}</span>
+            <span style="opacity: 1;">{{ oogabooga }} {{ articles }}</span>
             <button @click="addPage()">Add Page</button>
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
             <span class="fake-link" style="margin-right: 40px;" @click="getArticles('the-verge')">THE VERGE</span>
@@ -25,24 +25,24 @@
       <full-page ref="fullpage" :options="options" id="fullpage">
         <div class="section fp-section fp-table" v-for="(article, index) in articles" :key="index" :style="{ backgroundColor: bgColors[index], height: docHeight }">
           <transition name="v-fade" mode="out-in">
-            <div v-if="article" :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
-                <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam! -->
+            <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam!
                 <div style="padding: 0px">
                   <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
                     <img :src="''" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
                   </div>
                   <span class="heading">
-                    <!-- Lorem ipsum dolor sit amet. -->
-                    {{ article.title }}
+                    Lorem ipsum dolor sit amet.
+                    <!-- {{ article.title }} -->
                   </span><br><br>
                   <span class="fill">
-                    <!-- Lorem ipsum dolor sit amet. -->
-                    {{ article.description }}
+                    Lorem ipsum dolor sit amet.
+                    <!-- {{ article.description }} -->
                   </span>
                   <br><br>
                   <span>
-                    <!-- Lorem ipsum dolor sit amet. -->
-                    {{ convertDate(article.publishedAt) }}
+                    Lorem ipsum dolor sit amet.
+                    <!-- {{ convertDate(article.publishedAt) }} -->
                   </span>
                   <span style="float: right;">
                     → Visit Story
@@ -114,8 +114,8 @@ export default {
         articles = response.data.articles
 
         for (let i = 0; i <= articles.length; i++) {
-          self.articles[i] = articles[i]
-          // self.articles.push({})
+          // self.articles[i] = articles[i]
+          self.articles.push({})
         }
 
 
