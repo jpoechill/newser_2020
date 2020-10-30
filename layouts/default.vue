@@ -111,6 +111,7 @@ export default {
       })
       .then(response => {
         articles = response.data.articles
+        console.log('xxx')
         console.log(articles)
         // for (let i = 0; i <= articles.length; i++) {
         //   // self.articles[i] = articles[i]
