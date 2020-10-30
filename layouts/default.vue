@@ -22,7 +22,7 @@
 
       <!-- Start FullPage Content -->
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section" v-for="x in 10" :key="x" :style="{ backgroundColor: bgColors[x], height: docHeight }">
+        <div class="section" v-for="(article, index) in articles" :key="index" :style="{ backgroundColor: bgColors[index], height: docHeight }">
           <transition name="v-fade" mode="out-in">
             <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam!
@@ -105,12 +105,13 @@ export default {
         }
       })
       .then(response => {
-        articles = response.data.articles
+        // articles = response.data.articles
 
-        for (let i = 0; i <= articles.length; i++) {
-          self.articles[i] = articles[i]
-        }
+        // for (let i = 0; i <= articles.length; i++) {
+        //   self.articles[i] = articles[i]
+        // }
 
+        articles.push('x')
 
         // this.articles[0].title = 'dog'
         this.oogabooga = 'dog'
@@ -166,7 +167,7 @@ export default {
       showNews: false,
       docHeight: '1000px',
       API_Key: '86fa2caa5dac471a98d05dfa2d141b6f',
-      articles: [{ name: 'ooga booga', title: '' }],
+      articles: [{},{}],
       bgColors: [],
       sources: [
         {
