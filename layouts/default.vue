@@ -26,13 +26,12 @@
         <div class="section fp-section fp-table" v-for="(article, index) in articles" :key="index" :style="{ backgroundColor: bgColors[index], height: docHeight }">
           <transition name="v-fade" mode="out-in">
             <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, veniam!
                 <div style="padding: 0px">
                   <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
                     <img :src="''" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
                   </div>
                   <span class="heading">
-                    Lorem ipsum dolor sit amet.
+                    <!-- Lorem ipsum dolor sit amet. -->
                     <!-- {{ article.title }} -->
                   </span><br><br>
                   <span class="fill">
@@ -41,7 +40,7 @@
                   </span>
                   <br><br>
                   <span>
-                    Lorem ipsum dolor sit amet.
+                    <!-- Lorem ipsum dolor sit amet. -->
                     <!-- {{ convertDate(article.publishedAt) }} -->
                   </span>
                   <span style="float: right;">
@@ -113,12 +112,12 @@ export default {
       .then(response => {
         articles = response.data.articles
 
-        for (let i = 0; i <= articles.length; i++) {
-          // self.articles[i] = articles[i]
-          self.articles.push({})
-        }
+        // for (let i = 0; i <= articles.length; i++) {
+        //   // self.articles[i] = articles[i]
+        // }
 
 
+        self.articles.push({})
         // this.articles[0].title = 'dog'
 
         // self.$forceUpdate();
