@@ -114,7 +114,7 @@ export default {
         console.log('xxx')
         console.log(articles)
         for (let i = 0; i <= articles.length; i++) {
-          self.articles.push(articles[i])
+          self.articles[i] = 'articles[i]'
         }
 
 
