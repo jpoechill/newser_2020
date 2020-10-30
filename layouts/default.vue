@@ -8,7 +8,7 @@
         <div style="width: 100%; padding: 0px 100px;">
           <div style="display: inline;">
             <div style="display: inline-block; background-color: white; border-radius: 100px; height: 33px; width: 33px; margin-top: -4px; margin-right: 8px;"></div> 
-            <div style="display: inline-block; letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
+            <div class="mobile-only" style="letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
@@ -24,8 +24,8 @@
           <transition name="v-fade" mode="out-in">
             <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
                 <div style="padding: 0px">
-                  <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
-                    <img :src="article.urlToImage" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
+                  <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px;">
+                    <img :src="article.urlToImage" alt=""  class="headerImg" style="margin: auto; border-radius: 10px;">
                   </div>
                   <span class="heading">
                     {{ article.title }}
@@ -203,15 +203,68 @@ img {
   box-shadow: 3px 8px 16px 2px rgba(0,0,0,0.23);
 }
 
+/* For mobile phones: */
+.mobile-only {
+  display: none;
+}
+
 .heading {
-  font-size: 80px;
+  font-size: 40px;
   font-weight: 600;
 }
 
 .fill {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 30px;
   font-weight: 400;
+}
+
+.headerImg {
+  height: 100px;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */  
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .heading {
+    font-size: 60px;
+    font-weight: 600;
+  }
+
+  .fill {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+  }  
+
+  .headerImg {
+    height: 160px;
+  }
+}
+
+@media only screen and (min-width: 941px) {
+  /* For desktop: */
+  .mobile-only {
+    display: inline-block;
+  }
+
+  .heading {
+    font-size: 80px;
+    font-weight: 600;
+  }
+
+  .fill {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+  
+  .headerImg {
+    height: 300px;
+  }
 }
 
 .fake-link:hover {
