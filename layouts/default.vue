@@ -113,12 +113,12 @@ export default {
         articles = response.data.articles
         console.log('xxx')
         console.log(articles)
-        // for (let i = 0; i <= articles.length; i++) {
-        //   // self.articles[i] = articles[i]
-        // }
+        for (let i = 0; i <= articles.length; i++) {
+          self.articles[i] = articles[i]
+        }
 
 
-        self.articles.push({})
+        // self.articles.push({})
         // this.articles[0].title = 'dog'
 
         // self.$forceUpdate();
