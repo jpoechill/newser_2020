@@ -22,7 +22,7 @@
 
       <!-- Start FullPage Content -->
       <full-page ref="fullpage" :options="options" id="fullpage">
-        <div class="section" v-for="x in 10" :key="x">
+        <div class="section" v-for="x in 10" :key="x" :style="{ backgroundColor: bgColors[x], height: docHeight }">
           yyyyy
         </div>
       </full-page>
@@ -166,7 +166,7 @@ export default {
       options: {
         licenseKey: 'YOUR_KEY_HEERE',
         menu: '#menu',
-        sectionsColor: ['#ADE6D0', '#F1F0CF', '#EBCEED', '#DEB3EB', '#B4C6DD', '#DAF0EE', '#F0B2D3', '#EFDEF0']
+        // sectionsColor: ['#ADE6D0', '#F1F0CF', '#EBCEED', '#DEB3EB', '#B4C6DD', '#DAF0EE', '#F0B2D3', '#EFDEF0']
       },
     }
   }
