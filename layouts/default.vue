@@ -28,7 +28,7 @@
             <div :style="{ opacity: genOpacity }" style="text-align: left; padding: 0px 100px; display: table-cell; vertical-align: middle; transition: opacity 0.3s; -webkit-transition: opacity 0.3s;">
                 <div style="padding: 0px">
                   <div class="progressive-cover" style="margin-top: 0px; margin-bottom: 30px; width: 300px; height: 300px;">
-                    <img :src="''" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
+                    <img :src="article.urlToImage" alt=""  style="height: 300px; margin: auto; border-radius: 10px;">
                   </div>
                   <span class="heading">
                     <!-- Lorem ipsum dolor sit amet. -->
