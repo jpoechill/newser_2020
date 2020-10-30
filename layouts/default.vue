@@ -104,7 +104,7 @@ export default {
 
       let articles = []
 
-      axios.get('https://cors-proxy.htmldriven.com/?url=https://newsapi.org/v2/everything?sources=' + source + '&apiKey=36dbfb425292424e94d13d7887c9e7ba', {
+      axios.get('https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?sources=' + source + '&apiKey=36dbfb425292424e94d13d7887c9e7ba', {
         headers: {
           'X-Requested-With': 'XMLHttpRequest'
         }
