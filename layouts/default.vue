@@ -19,7 +19,7 @@
       </div>
     </div>
     <full-page ref="fullpage" :options="options" id="fullpage">
-      <div v-for="x in 10" :key="x" class="section fp-section active fp-table fp-completely" data-fp-styles="null" :height="docHeight" :style="{ backgroundColor: bgColors[x], height: docHeight }">
+      <div v-for="x in 10" :key="x" class="fp-section active" data-fp-styles="null" :height="docHeight" :style="{ backgroundColor: bgColors[x], height: docHeight }">
           <!-- <transition name="v-fade" mode="out-in"> -->
 
             xxx
