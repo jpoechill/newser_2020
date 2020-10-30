@@ -1,7 +1,7 @@
 <template>
   <div>
     <no-ssr>
-      <full-page ref="fullpage" :options="JSON.stringify(options)" id="fullpage">
+      <full-page ref="fullpage" id="fullpage">
         <div class="section">
           sadasd
         </div>
