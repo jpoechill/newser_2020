@@ -8,7 +8,7 @@
         <div style="width: 100%; padding: 0px 100px;">
           <div style="display: inline;">
             <div style="display: inline-block; background-color: white; border-radius: 100px; height: 33px; width: 33px; margin-top: -4px; margin-right: 8px;"></div> 
-            <div class="mobile-only" style="letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>NEWSER</b></div>
+            <div class="mobile-only" style="letter-spacing: 3px; font-size: 23px; vertical-align: top;"><b>X SKETCH</b></div>
           </div>
           <div style="display: inline; float: right; padding-right: 200px;">
             <span class="fake-link" @click="getArticles('mtv-news')" style="margin-right: 40px; padding-bottom: 6px; border-bottom: 3px solid #FFFFFF;">MTV</span> 
@@ -37,8 +37,10 @@
                   <span>
                     {{ convertDate(article.publishedAt) }}
                   </span>
-                  <span style="float: right;">
-                    → Visit Story
+                  <span style="float: right; color: #FFF;">
+                    <a :href="article.url" target="_blank">
+                      → Visit Story
+                    </a>
                   </span>
                 </div>
             </div>
@@ -197,6 +199,11 @@ html {
 /* h1 {
   font-size: 180px;
 } */
+
+a:link, a:visited, a:active {
+  color: #FFF;
+  text-decoration: none;
+}
 
 img {
   -webkit-box-shadow: 3px 8px 16px 2px rgba(0,0,0,0.23); 
