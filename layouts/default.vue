@@ -56,6 +56,25 @@ import axios from 'axios'
 
 export default {
   created () {
+    // console.log('hello')
+
+    // axios.get('https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/everything?sources=polygon&apiKey=36dbfb425292424e94d13d7887c9e7ba', {
+    //     headers: {
+    //       'X-Requested-With': 'XMLHttpRequest'
+    //     }
+    //   })
+    //   .then(response => {
+    //     console.log('ooga booga')
+    //     // articles = response.data.articles
+    //     console.log(response.data.articles)
+    //     // self.articles = articles
+
+    //     // this.oogabooga = 'dog'
+    //   })
+    //   .catch(function (err) {
+    //     console.log(err)
+    //   })
+
     this.getArticles('polygon')
   },
   mounted() {
@@ -91,10 +110,11 @@ export default {
         
         self.articles = articles
 
-        this.oogabooga = 'dog'
+        // this.oogabooga = 'dog'
       })
-      .catch(function () {
+      .catch(function (err) {
         console.log('ERR')
+        console.log(err)
       })
       
       console.log('data is set')
@@ -116,7 +136,7 @@ export default {
     populateColors: function () {
       for (let i = 0; i < 100; i++) {
         let color = this.getRandomPastel()
-        console.log('color: ' + color)
+        console.log('color 123: ' + color)
         this.bgColors.push(this.getRandomPastel())
       }
     },
